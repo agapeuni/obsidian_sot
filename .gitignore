@@ -1,0 +1,113 @@
+# ============================================================
+# Obsidian - local UI/session state
+# ============================================================
+
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
+.obsidian/cache/
+
+# NOTE:
+# Plugin data.json may contain important configuration.
+# Do not ignore globally unless necessary.
+# .obsidian/plugins/*/data.json
+
+
+# ============================================================
+# Obsidian trash / sync conflicts
+# ============================================================
+
+.trash/
+*.sync-conflict-*
+
+
+# ============================================================
+# Secrets / credentials
+# ============================================================
+
+.env
+.env.*
+!.env.example
+
+*.pem
+*.key
+*.p12
+*.pfx
+
+id_rsa*
+id_ed25519*
+
+# Optional credential files
+credentials.json
+secrets.json
+
+
+# ============================================================
+# Temporary / backup files
+# ============================================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.log
+~$*
+
+
+# ============================================================
+# Operating system
+# ============================================================
+
+.DS_Store
+Thumbs.db
+desktop.ini
+
+
+# ============================================================
+# Development dependencies / caches
+# ============================================================
+
+node_modules/
+
+__pycache__/
+*.py[cod]
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+
+# ============================================================
+# AI models / large generated data
+# ============================================================
+
+*.gguf
+*.safetensors
+
+# Be careful:
+# *.bin can also match legitimate binary attachments.
+# Uncomment only if required.
+# *.bin
+
+
+# ============================================================
+# Large archives
+# Uncomment if archives are NOT part of the knowledge base
+# ============================================================
+
+# *.zip
+# *.7z
+# *.rar
+
+
+# ============================================================
+# Large video/audio
+# Uncomment if media is stored separately
+# ============================================================
+
+# *.mp4
+# *.mov
+# *.avi
+# *.mkv
+# *.wav
