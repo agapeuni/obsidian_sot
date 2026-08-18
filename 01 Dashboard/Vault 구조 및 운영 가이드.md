@@ -1,15 +1,15 @@
 ---
-title: Obsidian Vault 구조
+title: Vault 구조 및 운영 가이드
 type: guide
 status: active
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-08-18
 tags:
   - vault/운영
 visibility: private
 rag: include
 ---
-# Obsidian Vault 구조
+# Vault 구조 및 운영 가이드
 
 이 Vault는 개인 생활부터 기술 지식, 업무, 콘텐츠, 사업, 재무까지 모든 자료를 장기적으로 관리하는 중심 저장소다.
 
@@ -107,4 +107,3 @@ rag: include
 4. 사실, 의견, 추론을 구분하고 확인되지 않은 내용은 표시한다.
 5. 비밀정보, 토큰, 비밀번호, 개인정보를 문서에 직접 기록하지 않는다.
 6. 대량 이동, 일괄 이름 변경, 삭제는 사용자 승인 후 수행한다.
-

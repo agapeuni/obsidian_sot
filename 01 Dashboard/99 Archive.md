@@ -42,4 +42,4 @@ path:"99 Archive"
 ## 관련
 
 - [[Home]]
-- [[README - Vault 구조]]
+- [[Vault 구조 및 운영 가이드]]

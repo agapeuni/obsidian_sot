@@ -17,7 +17,7 @@ rag: include
 # Home
 
 Vault 전체의 진입점이다. 각 영역 MOC를 거쳐 문서로 이동한다.
-구조와 운영 규칙은 [[README - Vault 구조]]에 있다.
+구조와 운영 규칙은 [[Vault 구조 및 운영 가이드]]에 있다.
 
 운영 자동화는 [[OpenClaw Obsidian 변경 정책]], 분류 기준은 [[Vault 태그 사전]]을 따른다.
 

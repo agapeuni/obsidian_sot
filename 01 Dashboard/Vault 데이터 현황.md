@@ -79,4 +79,4 @@ rag: include
 
 - [[Home]]
 - [[지식 연결 허브]]
-- [[README - Vault 구조]]
+- [[Vault 구조 및 운영 가이드]]
