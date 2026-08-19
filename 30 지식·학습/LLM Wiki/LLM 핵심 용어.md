@@ -1,14 +1,15 @@
 ---
 title: LLM 핵심 용어
 type: glossary
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/llm
   - knowledge/glossary
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM 핵심 용어
@@ -42,8 +43,16 @@ rag: include
 - 모델·벤더마다 정의가 다른 경우 차이를 별도 노트로 확장한다.
 - 최신 기능이나 수치는 출처와 확인 날짜를 기록한다.
 
+## 출처
+
+- [Attention Is All You Need](https://arxiv.org/abs/1706.03762)
+- [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](https://arxiv.org/abs/2005.11401)
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+- [MCP 공식 문서](https://modelcontextprotocol.io/)
+
 ## 관련
 
 - [[LLM Wiki]]
 - [[LLM 학습 로드맵]]
-
+- [[Transformer]]
+- [[Embedding]]

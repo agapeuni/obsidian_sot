@@ -1,14 +1,15 @@
 ---
 title: LLMOps
 type: operations
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/llmops
   - operations
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLMOps
@@ -42,9 +43,36 @@ LLMOps는 LLM 애플리케이션을 반복 가능하게 개발·배포·관측·
 - 사용자 재질문·수정 비율
 - 안전 정책 차단과 오탐 비율
 
+## 버전 단위
+
+- 애플리케이션 코드와 배포 환경
+- System prompt·도구 설명·출력 Schema
+- 모델 공급자·모델 ID·추론 파라미터
+- RAG 원본 스냅샷·분할기·임베딩·색인
+- 평가셋·평가 코드·판정 임계값
+
+## 장애 대응
+
+1. 요청·검색·모델·도구 호출을 하나의 추적 ID로 연결한다.
+2. 영향 범위와 데이터 노출 여부를 먼저 판단한다.
+3. 도구 쓰기 권한이나 문제 버전을 차단한다.
+4. 이전 검증 버전으로 롤백한다.
+5. 장애 입력을 회귀 평가셋에 추가한다.
+
+## 실패 패턴
+
+- 모델 이름만 기록하고 실제 공급자 버전과 파라미터를 남기지 않는다.
+- 평균 지연시간만 보고 p95·p99와 타임아웃을 놓친다.
+- 프롬프트 로그에 개인정보와 기밀 원문을 그대로 저장한다.
+- 평가 통과 없이 모델·프롬프트·색인을 독립 배포한다.
+
+## 출처
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+
 ## 관련
 
 - [[LLM 평가]]
 - [[LLM 보안]]
 - [[LLM 애플리케이션 아키텍처]]
-

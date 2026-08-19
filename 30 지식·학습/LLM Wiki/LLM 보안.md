@@ -1,14 +1,15 @@
 ---
 title: LLM 보안
 type: security
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/security
   - ai/llm
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM 보안
@@ -42,9 +43,30 @@ rag: include
 - [ ] 운영·개발·평가 데이터를 분리했다.
 - [ ] 사고 시 도구와 모델 접근을 즉시 차단할 수 있다.
 
+## 위협 경계
+
+| 경계 | 확인 사항 |
+|---|---|
+| 사용자 → 애플리케이션 | 입력 검증, 인증, 요청 제한 |
+| 외부 문서 → RAG | 간접 인젝션, 악성 콘텐츠, 출처 신뢰도 |
+| 모델 → 도구 | 최소 권한, 승인, 입력 Schema, 멱등성 |
+| 모델 → 사용자 | 민감정보, 근거, 정책 위반, 출력 형식 |
+| 로그·평가셋 | 개인정보 마스킹, 보존 기간, 접근 권한 |
+
+## 실패 사례를 남기는 방법
+
+1. 공격 입력과 신뢰 경계를 기록한다.
+2. 실제로 통과한 계층과 차단된 계층을 구분한다.
+3. 데이터 노출·권한 변경·비용 발생 영향을 기록한다.
+4. 탐지 규칙과 회귀 평가셋을 함께 갱신한다.
+
+## 출처
+
+- [OWASP Top 10 for LLM Applications](https://genai.owasp.org/llm-top-10/)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+
 ## 관련
 
 - [[AI Agent]]
 - [[RAG]]
 - [[LLMOps]]
-

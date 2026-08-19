@@ -1,14 +1,15 @@
 ---
 title: AI Agent
 type: concept
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/agent
   - ai/llm
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # AI Agent
@@ -45,9 +46,35 @@ AI Agent는 목표를 달성하기 위해 LLM이 상태를 해석하고, 도구�
 - 도구 결과를 성공으로 가정하지 않고 후속 검증한다.
 - 반복 횟수, 시간, 토큰, 비용 한도를 둔다.
 
+## 적용 조건
+
+- 목표는 분명하지만 실행 경로가 입력과 도구 결과에 따라 달라진다.
+- 각 단계의 성공 여부를 관측하고 재계획할 수 있다.
+- 도구 권한, 예산, 반복 횟수와 종료 조건을 시스템이 강제할 수 있다.
+- 실패 시 사람이 개입하거나 안전한 상태로 복구할 수 있다.
+
+## 실패 패턴
+
+- 도구 설명이 모호해 잘못된 도구나 인자를 선택한다.
+- 성공 여부를 확인하지 않고 다음 단계로 진행한다.
+- 동일 작업을 반복하거나 외부 시스템에 중복 요청한다.
+- 메모리의 오래된 상태를 사실로 취급한다.
+- 에이전트가 필요하지 않은 고정 절차까지 모델 판단에 맡긴다.
+
+## 검증 기준
+
+- 작업 성공률과 단계별 도구 성공률
+- 승인 없는 쓰기·삭제·전송 발생 건수
+- 평균 단계 수, 재시도율, 중복 실행률
+- 실행 시간·토큰·비용 한도 초과율
+
+## 출처
+
+- [ReAct: Synergizing Reasoning and Acting in Language Models](https://arxiv.org/abs/2210.03629)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+
 ## 관련
 
 - [[MCP]]
 - [[LLM 보안]]
 - [[LLMOps]]
-

@@ -1,14 +1,15 @@
 ---
 title: LLM 평가
 type: methodology
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/evaluation
   - ai/llm
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM 평가
@@ -43,9 +44,33 @@ LLM 평가는 모델 단독 점수가 아니라 실제 애플리케이션의 품
 3. 평균값뿐 아니라 최악 사례와 실패 유형을 본다.
 4. 품질 상승과 비용·지연시간 증가를 함께 판단한다.
 
+## 평가 설계 절차
+
+1. 사용자 과업과 실패 비용을 정의한다.
+2. 정상·경계·공격·운영 장애 사례를 표본화한다.
+3. 자동 지표와 인간 평가 기준을 함께 정의한다.
+4. 기준 버전과 후보 버전을 동일한 데이터로 비교한다.
+5. 전체 평균뿐 아니라 유형별 최악 사례를 검토한다.
+6. 실패 사례를 회귀 평가셋에 추가한다.
+
+## 판정 예시
+
+| 게이트 | 성공 기준 | 실패 시 조치 |
+|---|---|---|
+| 사실성 | 치명 오류 0건 | 근거·검색·거부 정책 수정 |
+| 형식 | Schema 통과율 99% 이상 | 구조화 출력과 재시도 보완 |
+| 안전 | 고위험 정책 위반 0건 | 배포 중단과 위협 모델 갱신 |
+| 성능 | p95가 서비스 SLO 이내 | 모델·검색·캐시 최적화 |
+| 비용 | 요청당 예산 이내 | 라우팅·컨텍스트·모델 조정 |
+
+## 출처
+
+- [Holistic Evaluation of Language Models](https://arxiv.org/abs/2211.09110)
+- [RAGAS: Automated Evaluation of Retrieval Augmented Generation](https://arxiv.org/abs/2309.15217)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+
 ## 관련
 
 - [[RAG]]
 - [[LLMOps]]
 - [[프롬프트 엔지니어링]]
-

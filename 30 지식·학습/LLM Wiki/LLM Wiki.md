@@ -3,7 +3,7 @@ title: LLM Wiki
 type: moc
 status: active
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 aliases:
   - LLM 지식 위키
 tags:
@@ -11,6 +11,7 @@ tags:
   - ai/llm
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM Wiki
@@ -32,7 +33,7 @@ LLM의 원리, 모델, 애플리케이션 아키텍처, RAG, Agent, 평가, 보�
 
 ```text
 LLM 원리
-  ├─ 토큰·임베딩·Transformer·Attention
+  ├─ 토큰·Embedding·Transformer·Attention
   ├─ 사전학습·미세조정·정렬·추론
   └─ 컨텍스트·프롬프트·구조화 출력
 
@@ -50,8 +51,12 @@ LLM 원리
 ## 핵심 개념
 
 - [[LLM 핵심 용어]]
+- [[Transformer]]
+- [[Embedding]]
 - [[LLM 애플리케이션 아키텍처]]
 - [[프롬프트 엔지니어링]]
+- [[LLM 모델 선택]]
+- [[멀티모달 LLM]]
 
 ## 애플리케이션 패턴
 
@@ -72,6 +77,15 @@ LLM 원리
 - [[템플릿 - LLM 개념]]
 - [[템플릿 - LLM 실험]]
 
+## 실무 완성 기준
+
+- 정의·적용 조건·한계·실패 사례가 구분되어 있다.
+- 핵심 사실에 공식 문서나 원 논문 출처가 있다.
+- `source_checked`로 마지막 검증일을 추적한다.
+- 최소 2개의 관련 노트와 연결된다.
+- `verified`는 출처와 운영 관점 검토를 완료한 경우에만 사용한다.
+- 회사 기밀과 개인정보는 `rag: include`에 포함하지 않는다.
+
 ## 관련 기존 자료
 
 - [[지식 연결 허브]]
@@ -84,4 +98,3 @@ LLM 원리
 ```query
 path:"30 지식·학습/LLM Wiki"
 ```
-

@@ -9,6 +9,7 @@ tags:
   - knowledge/management
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM Wiki 작성 규칙
@@ -23,6 +24,13 @@ rag: include
 - `paper`: 논문 요약과 재현 메모
 - `decision`: 선택과 근거
 - `operations`: 배포와 운영 절차
+- `architecture`: 시스템 구조와 계층별 책임
+- `security`: 위협 모델과 통제 기준
+- `methodology`: 평가·분석 방법론
+- `roadmap`: 단계별 학습·도입 경로
+- `glossary`: 공통 용어와 정의
+- `moc`: 주제별 탐색 허브
+- `guideline`: 작성·검증·운영 규칙
 
 ## 필수 메타데이터
 
@@ -37,6 +45,8 @@ source_checked:
 visibility: private
 rag: include
 ```
+
+`source_checked`는 마지막으로 핵심 출처와 사실을 확인한 날짜다. 출처가 없는 개인 판단 노트도 검토일을 기록하고, 본문에 판단 근거를 구분해 남긴다.
 
 ## 본문 원칙
 

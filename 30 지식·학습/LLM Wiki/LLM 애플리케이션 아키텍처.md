@@ -1,14 +1,15 @@
 ---
 title: LLM 애플리케이션 아키텍처
 type: architecture
-status: active
+status: verified
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/llm
   - architecture
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM 애플리케이션 아키텍처
@@ -49,10 +50,31 @@ rag: include
 4. 모든 답변보다 추적 가능한 입력·모델·프롬프트·근거·출력을 남긴다.
 5. 실패 시 안전한 기본값과 수동 처리 경로를 제공한다.
 
+## 설계 결정 기록
+
+| 결정 | 최소 기록 항목 |
+|---|---|
+| 모델 선택 | 후보, 평가셋, 품질, 비용, 지연시간, 데이터 경계 |
+| RAG 적용 | 원본 신뢰도, 분할, 검색, 권한, 인용, 갱신 주기 |
+| Agent 적용 | 목표, 도구, 승인 경계, 종료 조건, 롤백 |
+| 외부 도구 연동 | 인증 주체, 최소 권한, 멱등성, 감사 로그 |
+| 운영 배포 | SLO, 평가 게이트, 알림, 장애 대응, 폐기 기준 |
+
+## 실패 패턴
+
+- 모델 호출 성공을 업무 처리 성공으로 오인한다.
+- 검색·도구·모델 로그의 상관관계 ID가 없어 장애를 재현하지 못한다.
+- 사용자 권한이 검색과 도구 호출 단계에서 유실된다.
+- 프롬프트·모델·색인 버전이 따로 변경되어 회귀 원인을 찾지 못한다.
+
+## 출처
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)
+
 ## 관련
 
 - [[RAG]]
 - [[AI Agent]]
 - [[LLMOps]]
 - [[LLM 보안]]
-

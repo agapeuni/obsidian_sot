@@ -3,12 +3,13 @@ title: LLM 학습 로드맵
 type: roadmap
 status: active
 created: 2026-08-15
-updated: 2026-08-15
+updated: 2026-08-18
 tags:
   - ai/llm
   - learning/roadmap
 visibility: private
 rag: include
+source_checked: 2026-08-18
 ---
 
 # LLM 학습 로드맵
@@ -16,8 +17,8 @@ rag: include
 ## 1단계. 기반 개념
 
 - 토큰과 토크나이저
-- 벡터와 임베딩
-- Transformer와 Attention
+- 벡터와 [[Embedding]]
+- [[Transformer]]와 Attention
 - 사전학습, 지시 튜닝, 선호도 정렬
 - 컨텍스트 윈도와 생성 파라미터
 
@@ -28,7 +29,9 @@ rag: include
 - System·User·Tool 메시지의 역할
 - 프롬프트 구조와 구조화 출력
 - 모델 선택: 품질, 비용, 지연시간, 보안
+- [[LLM 모델 선택]] 의사결정 기록
 - 로컬 모델과 API 모델의 차이
+- [[멀티모달 LLM]]의 입력·출력·평가 방식
 - Ollama 기반 모델 실행
 
 **완료 기준:** 동일 과제를 2개 이상의 모델로 평가하고 선택 근거를 기록한다.
@@ -79,3 +82,7 @@ rag: include
 - [[LLM 애플리케이션 아키텍처]]
 - [[LLM 평가]]
 
+## 출처
+
+- [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+- [NIST AI RMF Generative AI Profile](https://doi.org/10.6028/NIST.AI.600-1)

@@ -7,6 +7,7 @@ updated: "{{date}}"
 tags:
   - ai/llm
   - experiment
+source_checked:
 visibility: private
 rag: exclude
 ---
@@ -45,8 +46,10 @@ rag: exclude
 ## 재현 방법
 
 
+## 출처
+
+
 ## 관련
 
 - [[LLM Wiki]]
 - [[LLM 평가]]
-
