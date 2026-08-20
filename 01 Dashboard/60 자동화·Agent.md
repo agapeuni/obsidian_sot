@@ -3,7 +3,7 @@ title: 60 자동화·Agent
 type: moc
 status: active
 created: 2026-08-11
-updated: 2026-08-18
+updated: 2026-08-20
 tags:
   - moc
   - area/automation
@@ -28,6 +28,7 @@ OpenClaw, n8n, MCP, RAG, AI Agent 자동화의 실험과 운영 기록을 다루
 
 - [[OpenClaw와 내담-t4 활용 기능]] — 서버 운영, 개발, 자동화, 콘텐츠 생성, AI 작업 및 외부 연동 기능
 - [[OpenClaw Obsidian 변경 정책]] — Vault를 자동 수정할 때 지켜야 할 안전·검증·복구 기준
+- [[프롬프트 템플릿 관리자]] — 프롬프트 템플릿의 범위·저장 형식·분류 기준 정리 (진행 중)
 
 ## 실험 기록
 
